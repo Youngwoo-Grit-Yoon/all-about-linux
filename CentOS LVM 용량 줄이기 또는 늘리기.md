@@ -1,5 +1,5 @@
-# CentOS LVM /home 용량 줄이기 또는 / 용량을 늘리기
-가상 머신에 CentOS를 처음 설치하면 기본 세팅으로 / 용량이 /home 용량에 비해 지나치게 부족하다. 따라서 /home 용량을 줄이고
+# CentOS 8 LVM /home 용량 줄이기 또는 / 용량을 늘리기
+가상 머신에 CentOS 8를 처음 설치하면 기본 세팅으로 / 용량이 /home 용량에 비해 지나치게 부족하다. 따라서 /home 용량을 줄이고
 / 용량을 늘리는 방법을 설명한다.  
 https://coconuts.tistory.com/832
 ## 1. home 경로 백업
