@@ -3,7 +3,12 @@
 / 용량을 늘리는 방법을 설명한다.  
 https://coconuts.tistory.com/832
 ## 1. home 경로 백업
-해당 문서를 작성할 당시 /home 경로에는 아무것도 없으므로(사용자 계정을 생성한 적 없음) 생략함
+```shell
+tar -zcvf /root/home.tar.gz -C /home .
+```
+```shell
+tar -zxvf /root/home.tar.gz -C /home
+```
 ## 2. home 언마운트
 CentOS 8을 이제 막 설치하였을 당시 디렉토리 구조는 하기와 같다.
 ```text
