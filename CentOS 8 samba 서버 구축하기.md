@@ -53,7 +53,7 @@ Added user youngwoo.
 ```
 (8) /etc/samba/smb.conf 설정 파일에 하기와 같은 정보를 추가한다.
 ```text
-[TechnicalDocs]
+[TechnicalDocs] --> 대괄호 안에 있는 이름이 공유 폴더 이름이 된다.
         comment = Technical Docs Directory of Hansol Inticube PlatformDev2
         path = /samba/TechnicalDocs
         public = yes
