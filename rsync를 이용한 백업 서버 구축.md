@@ -19,3 +19,10 @@ rsync -avzrt --delete -e "ssh -i /root/.ssh/id_rsa" root@10.1.15.135:/samba/Plat
 ```shell
 rsync -avzrt --delete -e "ssh -i /root/.ssh/id_rsa" root@10.1.15.135:/samba/PlatformDev2_GenesysCloud_Share_Folder/ /samba/PlatformDev2_GenesysCloud_Share_Folder/
 ```
+crontab에는 하기와 같이 등록한다.
+```text
+[root@glab-cloud02 ~]# crontab -e
+# 플랫폼개발2팀 Samba 공유 폴더 동기화(백업)
+00 00 * * * /usr/bin/rsync -avzrt --delete -e "ssh -i /root/.ssh/id_rsa" root@10.1.15.135:/samba/PlatformDev2_Developer_Share_Folder/ /samba/PlatformDev2_Developer_Share_Folder/
+00 00 * * * /usr/bin/rsync -avzrt --delete -e "ssh -i /root/.ssh/id_rsa" root@10.1.15.135:/samba/PlatformDev2_GenesysCloud_Share_Folder/ /samba/PlatformDev2_GenesysCloud_Share_Folder/
+```
