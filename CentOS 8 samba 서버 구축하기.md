@@ -48,4 +48,7 @@ chcon -t samba_share_t /samba/TechnicalDocs
 ```text
 [root@glab-cloud01 samba]# smbpasswd -a youngwoo
 New SMB password:
+Retype new SMB password:
+Added user youngwoo.
 ```
+(8) 
