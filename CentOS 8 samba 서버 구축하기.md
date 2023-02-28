@@ -51,4 +51,14 @@ New SMB password:
 Retype new SMB password:
 Added user youngwoo.
 ```
-(8) 
+(8) /etc/samba/smb.conf 설정 파일에 하기와 같은 정보를 추가한다.
+```text
+[TechnicalDocs]
+        comment = Technical Docs Directory of Hansol Inticube PlatformDev2
+        path = /samba/TechnicalDocs
+        public = yes
+        writable = yes
+        write list = youngwoo
+        create mask = 0777
+        directory mask = 0777
+```
