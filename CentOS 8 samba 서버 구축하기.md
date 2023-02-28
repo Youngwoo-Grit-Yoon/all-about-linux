@@ -62,3 +62,9 @@ Added user youngwoo.
         create mask = 0777
         directory mask = 0777
 ```
+(9) 설정을 마쳤으면 하기 명령어를 순서대로 실행한다.
+```text
+chcon -t samba_share_t /samba/TechnicalDocs
+systemctl restart smb
+systemctl restart nmb
+```
