@@ -16,3 +16,6 @@ RSA 기반의 keyfile을 이용하여 비밀번호 입력 없이 원격 백업�
 ```shell
 rsync -avzrt --delete -e "ssh -i /root/.ssh/id_rsa" root@10.1.15.135:/samba/PlatformDev2_Developer_Share_Folder/ /samba/PlatformDev2_Developer_Share_Folder/
 ```
+```shell
+rsync -avzrt --delete -e "ssh -i /root/.ssh/id_rsa" root@10.1.15.135:/samba/PlatformDev2_GenesysCloud_Share_Folder/ /samba/PlatformDev2_GenesysCloud_Share_Folder/
+```
