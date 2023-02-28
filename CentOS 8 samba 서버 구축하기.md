@@ -24,3 +24,28 @@ systemctl enable nmb
 ```shell
 systemctl start nmb
 ```
+(5) 공유 폴더를 생성한다.
+```shell
+mkdir -p /samba/TechnicalDocs
+```
+```shell
+chmod 777 /samba/TechnicalDocs
+```
+(6) SELinux를 설정한다.
+```shell
+setsebool -P samba_domain_controller on --> 해당 명령어는 한 번만 수행해주면 됨
+```
+```shell
+setsebool -P samba_enable_home_dirs on --> 해당 명령어는 한 번만 수행해주면 됨
+```
+```shell
+setsebool -P samba_export_all_rw on --> 해당 명령어는 한 번만 수행해주면 됨
+```
+```shell
+chcon -t samba_share_t /samba/TechnicalDocs
+```
+(7) samba를 사용할 사용자 계정을 추가한다. 비밀번호를 입력한다.
+```text
+[root@glab-cloud01 samba]# smbpasswd -a youngwoo
+New SMB password:
+```
