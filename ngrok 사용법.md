@@ -2,7 +2,7 @@
 ## 설명
 ngrok is the fastest way to host and secure your applications and services on the internet. Learn
 how by following our getting started guide, or dive straight into our products and offerings.
-## Docker를 이용하여 설치
+## Docker를 이용하여 설치(for Mac)
 공식 이미지를 도커 허브로부터 다운로드 한다.
 ```text
 $ docker pull ngrok/ngrok
@@ -21,4 +21,8 @@ ad6f58750874: Waiting
 ngrok로부터 토큰을 하나 발급 받는다.
 ```text
 2Vumc0kpG0d0btVE9RezTpoxlVA_7qNGE1EetgjPRrRM5bL2f
+```
+하기 명령어를 실행한다.
+```text
+docker run -it --name ngrok -e NGROK_AUTHTOKEN=2Vumc0kpG0d0btVE9RezTpoxlVA_7qNGE1EetgjPRrRM5bL2f ngrok/ngrok http host.docker.internal:80
 ```
