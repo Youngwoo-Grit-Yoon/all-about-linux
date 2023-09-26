@@ -24,5 +24,8 @@ ngrok로부터 토큰을 하나 발급 받는다.
 ```
 하기 명령어를 실행한다.
 ```text
-docker run -it --name ngrok -e NGROK_AUTHTOKEN=2Vumc0kpG0d0btVE9RezTpoxlVA_7qNGE1EetgjPRrRM5bL2f ngrok/ngrok http host.docker.internal:80
+docker run -it --name ngrok \
+--rm \
+-e NGROK_AUTHTOKEN=2Vumc0kpG0d0btVE9RezTpoxlVA_7qNGE1EetgjPRrRM5bL2f \
+ngrok/ngrok http host.docker.internal:80
 ```
